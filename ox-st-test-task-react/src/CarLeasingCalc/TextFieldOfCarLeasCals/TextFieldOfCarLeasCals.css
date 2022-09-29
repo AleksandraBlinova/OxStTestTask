@@ -1,14 +1,17 @@
 .text-fields{
     margin-left: 47px;  
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, auto);
     margin-top: 0;
+    width: 427px;
+    margin-bottom: 0;
 }
 
 
 .text-fields .text-field{
    width: 427px;
    margin-top: 0;
+   margin-bottom: 0;
 }
 
 .text-field-p-text{
