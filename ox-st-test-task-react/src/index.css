@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Girloy-Regular';
+    src: local('Girloy-Regular'), url(./fonts/Gilroy-Regular.ttf) format('truetype');
+  }
+
+  @font-face {
+    font-family: 'Nekst-Black';
+    src: local('Nekst-Black'), url(./fonts/Nekst-Black.ttf) format('truetype');
+  }
