@@ -1,12 +1,11 @@
 import React from "react";
 import Slider from "@mui/material/Slider";
 import { styled } from "@mui/material/styles";
-import "./CustomSliderComponent.css";
 
 export const CustomSliderComponent = styled(Slider)({
   color: "#FF9514",
   width: 360,
-  height: 2,
+  height: 1,
   marginTop: -20,
   marginLeft: 6,
   "& .MuiSlider-track": {

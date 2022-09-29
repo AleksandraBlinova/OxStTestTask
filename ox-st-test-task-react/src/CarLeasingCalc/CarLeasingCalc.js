@@ -22,9 +22,10 @@ const CarLeasingCalc = () => {
           Рассчитайте стоимость автомобиля в лизинг
         </h1>
       </div>
-      <div className="calc-body">
+      <div className="calc-body-counted-parametrs">
         <TextFieldOfCarLeasCals calcParametrs={calcParametrs} />
       </div>
+      <div className="calc-body-resulted-parametrs"></div>
     </>
   );
 };
