@@ -30,10 +30,18 @@ const ProgressForApply = styled(CircularProgress)(({ theme }) => ({
 }));
 
 const ButtonApply = ({ loading }) => {
-  console.log(loading);
+  const [ifPressed, setIfPressed] = useState(false);
+  const handleChangeIfPressed = () => {
+    setIfPressed(true);
+  };
+
   return (
     <div className="button-apply-container">
-      <ButtonForApply variant="contained">
+      <ButtonForApply
+        variant="contained"
+        disabled={ifPressed}
+        onClick={handleChangeIfPressed}
+      >
         {loading ? (
           <ProgressForApply />
         ) : (
