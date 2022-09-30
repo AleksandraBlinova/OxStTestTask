@@ -16,11 +16,50 @@ const CarLeasingCalc = () => {
     { id: 3, name: "Срок лизинга", extraInfo: "мес." },
   ]);
 
+  const [calcResultsParametrs, setCalcResultsParametrs] = useState([
+    { id: 1, name: "Сумма договора лизинга" },
+    { id: 2, name: "Ежемесячный платеж от" },
+  ]);
+
+  const [resultLeas, setResultLeas] = useState(4467313);
+  const handleChangeResultLeas = (event, newValue) => {
+    setResultLeas(valueInitalPaymMoney + valueLeasTerm * resultTermpaym);
+  };
+
+  const [resultTermpaym, setResultTermpaym] = useState(114455);
+  const handleChangeResultTermpaym = (event, newValue) => {
+    setResultTermpaym(
+      (valueCost - valueInitalPaymMoney) *
+        ((0.035 * Math.pow(1 + 0.035, valueLeasTerm)) /
+          (Math.pow(1 + 0.035, valueLeasTerm) - 1))
+    );
+  };
+
   const [valueCost, setValueCost] = useState(3300000);
 
   const handleChangeCost = (event, newValue) => {
     setValueCost(newValue);
     setValueInitalPaymMoney(Math.round(newValue * (valueInitalPaymPer / 100)));
+
+    setResultTermpaym(
+      Math.round(
+        (newValue - newValue * (valueInitalPaymPer / 100)) *
+          ((0.035 * Math.pow(1 + 0.035, valueLeasTerm)) /
+            (Math.pow(1 + 0.035, valueLeasTerm) - 1))
+      )
+    );
+
+    setResultLeas(
+      Math.round(
+        Math.round(newValue * (valueInitalPaymPer / 100)) +
+          valueLeasTerm *
+            Math.round(
+              (newValue - Math.round(newValue * (valueInitalPaymPer / 100))) *
+                ((0.035 * Math.pow(1 + 0.035, valueLeasTerm)) /
+                  (Math.pow(1 + 0.035, valueLeasTerm) - 1))
+            )
+      )
+    );
   };
 
   const handleChangeCostKeyboard = (event) => {
@@ -50,30 +89,48 @@ const CarLeasingCalc = () => {
   const handleChangeInitalPaymPer = (event, newValue) => {
     setValueInitalPaymPer(newValue);
     setValueInitalPaymMoney(Math.round(valueCost * (newValue / 100)));
+
+    setResultTermpaym(
+      Math.round(
+        (valueCost - valueCost * (newValue / 100)) *
+          ((0.035 * Math.pow(1 + 0.035, valueLeasTerm)) /
+            (Math.pow(1 + 0.035, valueLeasTerm) - 1))
+      )
+    );
+
+    setResultLeas(
+      Math.round(
+        valueCost * (newValue / 100) +
+          valueLeasTerm *
+            (valueCost - Math.round(valueCost * (newValue / 100))) *
+            ((0.035 * Math.pow(1 + 0.035, valueLeasTerm)) /
+              (Math.pow(1 + 0.035, valueLeasTerm) - 1))
+      )
+    );
   };
 
   const [valueLeasTerm, setValueLeasTerm] = useState(60);
 
   const handleChangeLeasTerm = (event, newValue) => {
     setValueLeasTerm(newValue);
-  };
-
-  const [calcResultsParametrs, setCalcResultsParametrs] = useState([
-    { id: 1, name: "Сумма договора лизинга" },
-    { id: 2, name: "Ежемесячный платеж от" },
-  ]);
-
-  const [resultLeas, setResultLeas] = useState(4467313);
-  const handleChangeResultLeas = (event, newValue) => {
-    setResultLeas(valueInitalPaymMoney + valueLeasTerm * resultTermpaym);
-  };
-
-  const [resultTermpaym, setResultTermpaym] = useState(114455);
-  const handleChangeResultTermpaym = (event, newValue) => {
     setResultTermpaym(
-      (valueCost - valueInitalPaymMoney) *
-        ((0.035 * Math.pow(1 + 0.035, valueLeasTerm)) /
-          (Math.pow(1 + 0.035, valueLeasTerm) - 1))
+      Math.round(
+        (valueCost - valueInitalPaymMoney) *
+          ((0.035 * Math.pow(1 + 0.035, newValue)) /
+            (Math.pow(1 + 0.035, newValue) - 1))
+      )
+    );
+
+    setResultLeas(
+      Math.round(
+        valueInitalPaymMoney +
+          newValue *
+            Math.round(
+              (valueCost - valueInitalPaymMoney) *
+                ((0.035 * Math.pow(1 + 0.035, newValue)) /
+                  (Math.pow(1 + 0.035, newValue) - 1))
+            )
+      )
     );
   };
 
