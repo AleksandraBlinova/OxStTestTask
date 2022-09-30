@@ -9,7 +9,7 @@ const TextFieldOfCarLeasCals = (props) => {
       {props.calcParametrs.map((calcParametr) => (
         <div className="text-field" key={calcParametr.id}>
           <p className="text-field-p-text">{calcParametr.name}</p>
-          <CustomInput disabled value={calcParametr.value} />
+          <CustomInput value={calcParametr.value} />
           <CustomSliderComponent />
         </div>
       ))}
