@@ -25,9 +25,9 @@ const CarLeasingCalc = () => {
 
   const handleChangeCostKeyboard = (event) => {
     if (event.target.value >= 1000000 && event.target.value <= 6000000) {
-      setValueCost(event.target.value);
+      setValueCost(parseInt(event.target.value));
       setValueInitalPaymMoney(
-        Math.round(event.target.value * (valueInitalPaymPer / 100))
+        Math.round(parseInt(event.target.value) * (valueInitalPaymPer / 100))
       );
     }
 
