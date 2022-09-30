@@ -24,10 +24,23 @@ const CarLeasingCalc = () => {
   };
 
   const handleChangeCostKeyboard = (event) => {
-    setValueCost(event.target.value);
-    setValueInitalPaymMoney(
-      Math.round(event.target.value * (valueInitalPaymPer / 100))
-    );
+    if (event.target.value >= 1000000 && event.target.value <= 6000000) {
+      setValueCost(event.target.value);
+      setValueInitalPaymMoney(
+        Math.round(event.target.value * (valueInitalPaymPer / 100))
+      );
+    }
+
+    if (event.target.value < 1000000) {
+      setValueCost(1000000);
+      setValueInitalPaymMoney(Math.round(1000000 * (valueInitalPaymPer / 100)));
+    }
+
+    if (event.target.value > 6000000) {
+      setValueCost(6000000);
+
+      setValueInitalPaymMoney(Math.round(6000000 * (valueInitalPaymPer / 100)));
+    }
   };
 
   const [valueInitalPaymMoney, setValueInitalPaymMoney] = useState(420000);
