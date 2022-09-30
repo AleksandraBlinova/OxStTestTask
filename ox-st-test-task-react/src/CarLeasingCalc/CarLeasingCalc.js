@@ -9,17 +9,53 @@ const CarLeasingCalc = () => {
     {
       id: 1,
       name: "Стоимость автомобиля",
-      value: 3300000,
+
       extraInfo: "₽",
     },
-    { id: 2, name: "Первоначальный взнос", value: 420000 },
-    { id: 3, name: "Срок лизинга", value: 60, extraInfo: "мес." },
+    { id: 2, name: "Первоначальный взнос" },
+    { id: 3, name: "Срок лизинга", extraInfo: "мес." },
   ]);
 
+  const [valueCost, setValueCost] = useState(3300000);
+
+  const handleChangeCost = (event, newValue) => {
+    setValueCost(newValue);
+    setValueInitalPaymMoney(Math.round(newValue * (valueInitalPaymPer / 100)));
+  };
+
+  const [valueInitalPaymMoney, setValueInitalPaymMoney] = useState(420000);
+
+  const [valueInitalPaymPer, setValueInitalPaymPer] = useState(12.7);
+
+  const handleChangeInitalPaymPer = (event, newValue) => {
+    setValueInitalPaymPer(newValue);
+    setValueInitalPaymMoney(Math.round(valueCost * (newValue / 100)));
+  };
+
+  const [valueLeasTerm, setValueLeasTerm] = useState(60);
+
+  const handleChangeLeasTerm = (event, newValue) => {
+    setValueLeasTerm(newValue);
+  };
+
   const [calcResultsParametrs, setCalcResultsParametrs] = useState([
-    { id: 1, name: "Сумма договора лизинга", value: 4467313, money: "₽" },
-    { id: 2, name: "Ежемесячный платеж от", value: 114455, money: "₽" },
+    { id: 1, name: "Сумма договора лизинга" },
+    { id: 2, name: "Ежемесячный платеж от" },
   ]);
+
+  const [resultLeas, setResultLeas] = useState(4467313);
+  const handleChangeResultLeas = (event, newValue) => {
+    setResultLeas(valueInitalPaymMoney + valueLeasTerm * resultTermpaym);
+  };
+
+  const [resultTermpaym, setResultTermpaym] = useState(114455);
+  const handleChangeResultTermpaym = (event, newValue) => {
+    setResultTermpaym(
+      (valueCost - valueInitalPaymMoney) *
+        ((0.035 * Math.pow(1 + 0.035, valueLeasTerm)) /
+          (Math.pow(1 + 0.035, valueLeasTerm) - 1))
+    );
+  };
 
   return (
     <>
@@ -29,11 +65,24 @@ const CarLeasingCalc = () => {
         </h1>
       </div>
       <div className="calc-body-counted-parametrs">
-        <TextFieldOfCarLeasCals calcParametrs={calcParametrs} />
+        <TextFieldOfCarLeasCals
+          calcParametrs={calcParametrs}
+          valueInitalPaymMoney={valueInitalPaymMoney}
+          valueCost={valueCost}
+          handleChangeCost={handleChangeCost}
+          valueInitalPaymPer={valueInitalPaymPer}
+          handleChangeInitalPaymPer={handleChangeInitalPaymPer}
+          valueLeasTerm={valueLeasTerm}
+          handleChangeLeasTerm={handleChangeLeasTerm}
+        />
       </div>
       <div className="calc-body-resulted-parametrs">
         <ResultsParametrsOfLeasCalc
           calcResultsParametrs={calcResultsParametrs}
+          resultTermpaym={resultTermpaym}
+          resultLeas={resultLeas}
+          handleChangeResultTermpaym={handleChangeResultTermpaym}
+          handleChangeResultLeas={handleChangeResultLeas}
         />
       </div>
     </>

@@ -4,27 +4,6 @@ import { CustomInput } from "./CustomInput/CustomInputComponent";
 import { CustomSliderComponent } from "./CustomSlider/CustomSliderComponent";
 
 const TextFieldOfCarLeasCals = (props) => {
-  const [valueCost, setValueCost] = useState(3300000);
-
-  const handleChangeCost = (event, newValue) => {
-    setValueCost(newValue);
-    console.log(newValue);
-  };
-
-  const [valueInitalPaym, setValueInitalPaym] = useState(12.7);
-
-  const handleChangeInitalPaym = (event, newValue) => {
-    setValueInitalPaym(newValue);
-    console.log(newValue);
-  };
-
-  const [valueLeasTerm, setValueLeasTerm] = useState(60);
-
-  const handleChangeLeasTerm = (event, newValue) => {
-    setValueLeasTerm(newValue);
-    console.log(newValue);
-  };
-
   return (
     <div className="text-fields">
       {props.calcParametrs.map((calcParametr) => (
@@ -32,29 +11,28 @@ const TextFieldOfCarLeasCals = (props) => {
           <p className="text-field-p-text">{calcParametr.name}</p>
         </div>
       ))}
-      <CustomInput value={valueCost} />
-      <CustomInput value={valueInitalPaym} />
-      <CustomInput value={valueLeasTerm} />
+      <CustomInput value={props.valueCost} />
+      <CustomInput
+        value={props.valueInitalPaymMoney + " " + props.valueInitalPaymPer}
+      />
+      <CustomInput value={props.valueLeasTerm} />
       <CustomSliderComponent
-        value={valueCost}
-        onChange={handleChangeCost}
+        value={props.valueCost}
+        onChange={props.handleChangeCost}
         min={1000000}
         max={6000000}
         step={100000}
-        valueLabelDisplay="on"
       />
       <CustomSliderComponent
-        value={valueInitalPaym}
-        onChange={handleChangeInitalPaym}
+        value={props.valueInitalPaymPer}
+        onChange={props.handleChangeInitalPaymPer}
         min={10}
         max={60}
         step={0.1}
-        valueLabelDisplay="on"
       />
       <CustomSliderComponent
-        value={valueLeasTerm}
-        valueLabelDisplay="on"
-        onChange={handleChangeLeasTerm}
+        value={props.valueLeasTerm}
+        onChange={props.handleChangeLeasTerm}
         min={1}
         max={60}
         step={1}

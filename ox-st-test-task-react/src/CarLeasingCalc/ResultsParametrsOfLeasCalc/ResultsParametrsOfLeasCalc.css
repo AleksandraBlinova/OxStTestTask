@@ -23,3 +23,9 @@
     padding-top: 0px;
     padding-bottom: 0px;
 }
+
+.result-texts-container {
+    display: grid;
+    grid-template-columns: repeat(3, 459px);
+    margin-top: -55px;
+}
