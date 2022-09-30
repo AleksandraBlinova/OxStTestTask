@@ -1,20 +1,20 @@
-.text-fields{
-    margin-left: 47px;  
+.text-fields {
     display: grid;
-    grid-template-columns: repeat(3, auto);
+    grid-template-columns: repeat(3, 459px);
     margin-top: 0;
-    width: 427px;
     margin-bottom: 0;
+    margin-left: 47px;
+
+
 }
 
+.text-fields .text-field {
+    margin-top: 0;
+    margin-bottom: 0;
 
-.text-fields .text-field{
-   width: 427px;
-   margin-top: 0;
-   margin-bottom: 0;
 }
 
-.text-field-p-text{
+.text-field-p-text {
     font-size: 16px;
     font-family: "Girloy-Regular";
     line-height: 20px;
