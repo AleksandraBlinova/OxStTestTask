@@ -14,4 +14,19 @@ export const CustomInput = styled(InputBase)(({ theme }) => ({
     color: "#575757",
     paddingLeft: "24px",
   },
+
+  "& .MuiInputBase-input:focus": {
+    backgroundColor: "#fff",
+    borderRadius: 16,
+    border: "2px solid #F3F3F4",
+  },
+  "& .MuiInputBase-input:active": {
+    backgroundColor: "#fff",
+    borderRadius: 16,
+  },
+
+  "& .MuiInputBase-input:disabled": {
+    backgroundColor: "#F3F3F4",
+    opacity: 0.4,
+  },
 }));
