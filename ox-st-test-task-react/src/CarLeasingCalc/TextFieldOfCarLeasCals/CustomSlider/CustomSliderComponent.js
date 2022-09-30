@@ -6,7 +6,7 @@ export const CustomSliderComponent = styled(Slider)({
   color: "#FF9514",
   width: 360,
   height: 1,
-  marginTop: -20,
+  marginTop: -13,
   marginLeft: 6,
   "& .MuiSlider-track": {
     border: "none",
