@@ -29,16 +29,16 @@ const ProgressForApply = styled(CircularProgress)(({ theme }) => ({
   color: "#FFF",
 }));
 
-const ButtonApply = () => {
-  const [loading, setLoading] = useState(true);
-  function handleClick() {
-    setLoading(true);
-  }
+const ButtonApply = ({ loading }) => {
+  console.log(loading);
   return (
     <div className="button-apply-container">
       <ButtonForApply variant="contained">
-        <p className="button-apply-container-text">Оставить заявку</p>
-        <ProgressForApply />
+        {loading ? (
+          <ProgressForApply />
+        ) : (
+          <p className="button-apply-container-text">Оставить заявку</p>
+        )}
       </ButtonForApply>
     </div>
   );

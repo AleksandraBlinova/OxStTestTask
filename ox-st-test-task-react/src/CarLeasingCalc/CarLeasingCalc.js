@@ -5,6 +5,11 @@ import TextFieldOfCarLeasCals from "./TextFieldOfCarLeasCals/TextFieldOfCarLeasC
 import ResultsParametrsOfLeasCalc from "./ResultsParametrsOfLeasCalc/ResultsParametrsOfLeasCalc";
 
 const CarLeasingCalc = () => {
+  const [loading, setLoading] = useState(false);
+  function handleChangeLoading() {
+    setLoading(!loading);
+  }
+
   const [calcParametrs, setCalcParametrs] = useState([
     {
       id: 1,
@@ -148,6 +153,7 @@ const CarLeasingCalc = () => {
           valueLeasTerm={valueLeasTerm}
           handleChangeLeasTerm={handleChangeLeasTerm}
           handleChangeCostKeyboard={handleChangeCostKeyboard}
+          handleChangeLoading={handleChangeLoading}
         />
       </div>
       <div className="calc-body-resulted-parametrs">
@@ -157,6 +163,7 @@ const CarLeasingCalc = () => {
           resultLeas={resultLeas}
           handleChangeResultTermpaym={handleChangeResultTermpaym}
           handleChangeResultLeas={handleChangeResultLeas}
+          loading={loading}
         />
       </div>
     </>

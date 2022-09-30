@@ -13,7 +13,7 @@ const ResultsParametrsOfLeasCalc = (props) => {
           </p>
         </div>
       ))}
-      <ButtonApply />
+      <ButtonApply loading={props.loading} />
       <div className="result-texts-container">
         {" "}
         <p className="result-parametrs-text-value">
