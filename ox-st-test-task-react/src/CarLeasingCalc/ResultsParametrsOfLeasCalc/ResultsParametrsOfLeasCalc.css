@@ -1,0 +1,25 @@
+.result-parametrs-body {
+    margin-left: 47px;
+    display: grid;
+    grid-template-columns: repeat(3, 459px);
+}
+
+.result-parametrs-text-name {
+    font-family: "Girloy-Regular";
+    line-height: 150%;
+    font-size: 16px;
+    color: #575757;
+    margin-bottom: 8px;
+    margin-top: 0px;
+}
+
+
+.result-parametrs-text-value {
+    font-family: "Nekst-Black";
+    font-size: 54px;
+    color: #575757;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
