@@ -1,5 +1,6 @@
 import React from "react";
 import "./ResultsParametrsOfLeasCalc.css";
+import ButtonApply from "./ButtonApply/ButtonApply";
 
 const ResultsParametrsOfLeasCalc = (props) => {
   return (
@@ -17,6 +18,7 @@ const ResultsParametrsOfLeasCalc = (props) => {
           </div>
         </div>
       ))}
+      <ButtonApply />
     </div>
   );
 };
