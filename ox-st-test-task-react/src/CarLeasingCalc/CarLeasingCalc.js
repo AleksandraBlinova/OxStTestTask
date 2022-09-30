@@ -51,13 +51,11 @@ const CarLeasingCalc = () => {
 
     setResultLeas(
       Math.round(
-        Math.round(newValue * (valueInitalPaymPer / 100)) +
+        newValue * (valueInitalPaymPer / 100) +
           valueLeasTerm *
-            Math.round(
-              (newValue - Math.round(newValue * (valueInitalPaymPer / 100))) *
-                ((0.035 * Math.pow(1 + 0.035, valueLeasTerm)) /
-                  (Math.pow(1 + 0.035, valueLeasTerm) - 1))
-            )
+            ((newValue - newValue * (valueInitalPaymPer / 100)) *
+              ((0.035 * Math.pow(1 + 0.035, valueLeasTerm)) /
+                (Math.pow(1 + 0.035, valueLeasTerm) - 1)))
       )
     );
   };
@@ -102,7 +100,7 @@ const CarLeasingCalc = () => {
       Math.round(
         valueCost * (newValue / 100) +
           valueLeasTerm *
-            (valueCost - Math.round(valueCost * (newValue / 100))) *
+            (valueCost - valueCost * (newValue / 100)) *
             ((0.035 * Math.pow(1 + 0.035, valueLeasTerm)) /
               (Math.pow(1 + 0.035, valueLeasTerm) - 1))
       )
@@ -125,11 +123,9 @@ const CarLeasingCalc = () => {
       Math.round(
         valueInitalPaymMoney +
           newValue *
-            Math.round(
-              (valueCost - valueInitalPaymMoney) *
-                ((0.035 * Math.pow(1 + 0.035, newValue)) /
-                  (Math.pow(1 + 0.035, newValue) - 1))
-            )
+            ((valueCost - valueInitalPaymMoney) *
+              ((0.035 * Math.pow(1 + 0.035, newValue)) /
+                (Math.pow(1 + 0.035, newValue) - 1)))
       )
     );
   };
