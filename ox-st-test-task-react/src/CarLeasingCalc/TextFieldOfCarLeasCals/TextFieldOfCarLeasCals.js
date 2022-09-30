@@ -12,17 +12,21 @@ const TextFieldOfCarLeasCals = (props) => {
         </div>
       ))}
       <CustomInput
-        value={props.valueCost + " " + "₽"}
+        value={props.valueCost + " ".repeat(33) + "₽"}
         onChange={props.handleChangeCostKeyboard}
-      />
+      />{" "}
       <CustomInput
         value={
-          props.valueInitalPaymMoney + " " + props.valueInitalPaymPer + "%"
+          props.valueInitalPaymMoney +
+          " ".repeat(27) +
+          props.valueInitalPaymPer +
+          "%"
         }
         disabled
       ></CustomInput>
-
-      <CustomInput value={props.valueLeasTerm + " " + "мес."}></CustomInput>
+      <CustomInput
+        value={props.valueLeasTerm + " ".repeat(40) + "мес."}
+      ></CustomInput>
       <CustomSliderComponent
         value={props.valueCost}
         onChange={props.handleChangeCost}
