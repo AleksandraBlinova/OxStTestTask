@@ -11,7 +11,10 @@ const TextFieldOfCarLeasCals = (props) => {
           <p className="text-field-p-text">{calcParametr.name}</p>
         </div>
       ))}
-      <CustomInput value={props.valueCost} />
+      <CustomInput
+        value={props.valueCost}
+        onChange={props.handleChangeCostKeyboard}
+      />
       <CustomInput
         value={props.valueInitalPaymMoney + " " + props.valueInitalPaymPer}
       />

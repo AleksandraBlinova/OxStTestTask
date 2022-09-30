@@ -23,6 +23,13 @@ const CarLeasingCalc = () => {
     setValueInitalPaymMoney(Math.round(newValue * (valueInitalPaymPer / 100)));
   };
 
+  const handleChangeCostKeyboard = (event) => {
+    setValueCost(event.target.value);
+    setValueInitalPaymMoney(
+      Math.round(event.target.value * (valueInitalPaymPer / 100))
+    );
+  };
+
   const [valueInitalPaymMoney, setValueInitalPaymMoney] = useState(420000);
 
   const [valueInitalPaymPer, setValueInitalPaymPer] = useState(12.7);
@@ -74,6 +81,7 @@ const CarLeasingCalc = () => {
           handleChangeInitalPaymPer={handleChangeInitalPaymPer}
           valueLeasTerm={valueLeasTerm}
           handleChangeLeasTerm={handleChangeLeasTerm}
+          handleChangeCostKeyboard={handleChangeCostKeyboard}
         />
       </div>
       <div className="calc-body-resulted-parametrs">
