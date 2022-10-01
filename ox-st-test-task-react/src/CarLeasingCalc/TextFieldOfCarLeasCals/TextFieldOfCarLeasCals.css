@@ -4,9 +4,9 @@
     margin-top: 0;
     margin-bottom: 0;
     margin-left: 47px;
-
-
 }
+
+
 
 .text-fields .text-field {
     margin-top: 0;
@@ -22,4 +22,13 @@
     margin-bottom: 29px;
     color: #575757;
 
+}
+
+.input-units-of-measure {
+    font-size: 30px;
+    font-family: "Nekst-Black";
+    margin-top: 50%;
+    margin-bottom: 50%;
+    color: #575757;
+    margin-right: 18px;
 }
