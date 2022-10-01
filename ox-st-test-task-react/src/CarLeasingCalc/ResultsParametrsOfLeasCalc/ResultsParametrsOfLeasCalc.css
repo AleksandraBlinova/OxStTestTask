@@ -43,3 +43,17 @@
     }
 
 }
+
+@media only screen and (max-width: 768px) {
+    .result-parametrs-body {
+        margin-left: 47px;
+        display: grid;
+        grid-template-columns: repeat(2, 350px);
+    }
+
+    .result-parametrs-text-value {
+        color: #333333;
+        margin-bottom: 20px;
+    }
+
+}
