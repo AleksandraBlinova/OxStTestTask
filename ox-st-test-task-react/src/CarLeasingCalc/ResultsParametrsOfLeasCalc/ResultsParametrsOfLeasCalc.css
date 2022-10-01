@@ -30,3 +30,12 @@
     grid-template-columns: repeat(3, 459px);
     margin-top: -55px;
 }
+
+@media only screen and (max-width: 1024px) {
+    .result-parametrs-body {
+        margin-left: 47px;
+        display: grid;
+        grid-template-columns: repeat(2, 459px);
+    }
+
+}

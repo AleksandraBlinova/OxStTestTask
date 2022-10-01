@@ -4,13 +4,15 @@
     margin-top: 0;
     margin-bottom: 0;
     margin-left: 47px;
+
 }
 
 
 
-.text-fields .text-field {
+.text-field {
     margin-top: 0;
     margin-bottom: 0;
+
 
 }
 
@@ -42,4 +44,52 @@
     margin-top: 15px;
     margin-bottom: 15px;
 
+}
+
+
+
+@media only screen and (max-width: 1024px) {
+    .text-fields {
+        display: grid;
+        grid-template-columns: repeat(1, 459px);
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-left: 36px;
+
+    }
+
+    .text-field-p-text {
+        font-size: 16px;
+        font-family: "Girloy-Regular";
+        line-height: 20px;
+        margin-top: 0;
+        margin-bottom: 29px;
+        color: #575757;
+
+    }
+
+
+}
+
+@media only screen and (max-width: 768px) {
+    .text-fields {
+        display: grid;
+        grid-template-columns: repeat(1, 459px);
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-left: 47px;
+
+    }
+}
+
+
+@media only screen and (max-width: 320px) {
+    .text-fields {
+        display: grid;
+        grid-template-columns: repeat(1, 459px);
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-left: 47px;
+
+    }
 }

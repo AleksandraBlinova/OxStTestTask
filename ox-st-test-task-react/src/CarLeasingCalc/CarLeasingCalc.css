@@ -16,6 +16,7 @@
 
 .calc-body-counted-parametrs {
     margin-bottom: 62px;
+
 }
 
 @media only screen and (max-width: 1024px) {
@@ -23,7 +24,7 @@
         font-size: 54px;
         margin-top: 100px;
         line-height: 90%;
-        margin-left: 47px;
+        margin-left: 36px;
         margin-right: 47px;
         font-family: 'Nekst-Black';
 

@@ -7,7 +7,7 @@ export const CustomSliderComponent = styled(Slider)({
   width: 360,
   height: 1,
   marginTop: -13,
-  marginLeft: 6,
+  marginLeft: 26,
   "& .MuiSlider-track": {
     border: "none",
   },
@@ -24,5 +24,9 @@ export const CustomSliderComponent = styled(Slider)({
     "&:before": {
       display: "none",
     },
+  },
+  "@media only screen and (max-width: 1024px)": {
+    marginTop: "-20px",
+    width: 800,
   },
 });
