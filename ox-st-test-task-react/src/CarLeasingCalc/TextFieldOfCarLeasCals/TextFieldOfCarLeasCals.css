@@ -74,7 +74,7 @@
 @media only screen and (max-width: 768px) {
     .text-fields {
         display: grid;
-        grid-template-columns: repeat(1, 459px);
+        grid-template-columns: repeat(1, 696px);
         margin-top: 0;
         margin-bottom: 0;
         margin-left: 36px;
@@ -86,9 +86,19 @@
 @media only screen and (max-width: 320px) {
     .text-fields {
         display: grid;
-        grid-template-columns: repeat(1, 459px);
-        margin-top: 0;
-        margin-bottom: 0;
-        margin-left: 36px;
+        grid-template-columns: repeat(1, 280px);
+        margin-left: 13px;
+        margin-top: 37px;
+
     }
+
+    .text-field-p-text {
+        font-size: 16px;
+        font-family: "Girloy-Regular";
+        line-height: 20px;
+        margin-top: 37px;
+        color: #575757;
+        margin-bottom: 5px;
+    }
+
 }

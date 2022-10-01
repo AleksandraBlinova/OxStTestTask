@@ -27,6 +27,10 @@ const TextFieldOfCarLeasCals = (props) => {
             "@media only screen and (max-width: 768px)": {
               width: "696px",
             },
+            "@media only screen and (max-width: 320px)": {
+              width: "280px",
+              height: "60px",
+            },
           }}
         >
           {" "}
@@ -66,6 +70,10 @@ const TextFieldOfCarLeasCals = (props) => {
             },
             "@media only screen and (max-width: 768px)": {
               width: "696px",
+            },
+            "@media only screen and (max-width: 320px)": {
+              width: "280px",
+              height: "60px",
             },
           }}
         >
@@ -121,6 +129,10 @@ const TextFieldOfCarLeasCals = (props) => {
 
             "@media only screen and (max-width: 768px)": {
               width: "696px",
+            },
+            "@media only screen and (max-width: 320px)": {
+              width: "280px",
+              height: "60px",
             },
           }}
         >

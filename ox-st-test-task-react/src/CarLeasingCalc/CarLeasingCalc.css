@@ -47,12 +47,17 @@
 
 @media only screen and (max-width: 320px) {
     .calc-header-h1 {
-        font-size: 54px;
+        font-size: 34px;
         margin-top: 44px;
         line-height: 90%;
-        margin-left: 47px;
-        margin-right: 47px;
+        margin-left: 21px;
         font-family: 'Nekst-Black';
+
+    }
+
+    .calc-header {
+
+        width: 289px;
 
     }
 }
