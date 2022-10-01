@@ -41,6 +41,10 @@ const CarLeasingCalc = () => {
   };
 
   const [valueCost, setValueCost] = useState(3300000);
+  const [valueInitalPaymMoney, setValueInitalPaymMoney] = useState(420000);
+
+  const [valueInitalPaymPer, setValueInitalPaymPer] = useState(12.7);
+  const [valueLeasTerm, setValueLeasTerm] = useState(60);
 
   const handleChangeCost = (event, newValue) => {
     setValueCost(newValue);
@@ -67,7 +71,7 @@ const CarLeasingCalc = () => {
 
   const handleChangeCostKeyboard = (event) => {
     if (event.target.value >= 1000000 && event.target.value <= 6000000) {
-      setValueCost(parseInt(event.target.value));
+      setValueCost(Math.round(parseInt(event.target.value)));
       setValueInitalPaymMoney(
         Math.round(parseInt(event.target.value) * (valueInitalPaymPer / 100))
       );
@@ -77,17 +81,11 @@ const CarLeasingCalc = () => {
       setValueCost(1000000);
       setValueInitalPaymMoney(Math.round(1000000 * (valueInitalPaymPer / 100)));
     }
-
     if (event.target.value > 6000000) {
       setValueCost(6000000);
-
       setValueInitalPaymMoney(Math.round(6000000 * (valueInitalPaymPer / 100)));
     }
   };
-
-  const [valueInitalPaymMoney, setValueInitalPaymMoney] = useState(420000);
-
-  const [valueInitalPaymPer, setValueInitalPaymPer] = useState(12.7);
 
   const handleChangeInitalPaymPer = (event, newValue) => {
     setValueInitalPaymPer(newValue);
@@ -111,8 +109,6 @@ const CarLeasingCalc = () => {
       )
     );
   };
-
-  const [valueLeasTerm, setValueLeasTerm] = useState(60);
 
   const handleChangeLeasTerm = (event, newValue) => {
     setValueLeasTerm(newValue);
