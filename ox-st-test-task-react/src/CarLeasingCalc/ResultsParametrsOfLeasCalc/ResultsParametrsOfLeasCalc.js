@@ -15,7 +15,7 @@ const ResultsParametrsOfLeasCalc = (props) => {
       <div>
         <p className="result-parametrs-text-name">Ежемесячный платеж от</p>{" "}
         <p className="result-parametrs-text-value">
-          {props.resultLeas + " " + "₽"}
+          {props.resultTermpaym + " " + "₽"}
         </p>
       </div>
 
