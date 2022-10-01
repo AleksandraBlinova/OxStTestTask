@@ -28,4 +28,6 @@ export const CustomInput = styled(InputBase)(() => ({
     backgroundColor: "#F3F3F4",
     opacity: 0.4,
   },
+
+  "@media only screen and (max-width: 1024px)": {},
 }));

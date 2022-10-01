@@ -29,4 +29,9 @@ export const CustomSliderComponent = styled(Slider)({
     marginTop: "-20px",
     width: 800,
   },
+
+  "@media only screen and (max-width: 768px)": {
+    marginTop: "-20px",
+    width: 600,
+  },
 });

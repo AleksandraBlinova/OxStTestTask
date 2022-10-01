@@ -29,6 +29,8 @@
         font-family: 'Nekst-Black';
 
     }
+
+
 }
 
 @media only screen and (max-width: 768px) {
@@ -36,8 +38,7 @@
         font-size: 54px;
         margin-top: 64px;
         line-height: 90%;
-        margin-left: 47px;
-        margin-right: 47px;
+        margin-left: 36px;
         font-family: 'Nekst-Black';
 
     }
