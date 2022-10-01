@@ -10,7 +10,9 @@
 
 .calc-header {
     margin: 0;
+
     width: 757px;
+
     max-height: 98px;
 }
 
@@ -28,10 +30,27 @@
         margin-right: 47px;
         font-family: 'Nekst-Black';
 
+
+    }
+
+    .calc-header {
+        margin: 0;
+        width: 1020px;
+        max-width: 100%;
+        max-height: 98px;
     }
 
     .calc-body-counted-parametrs {
         margin-bottom: 25px;
+        width: 1020px;
+        max-width: 100%;
+    }
+
+    .calc-body-resulted-parametrs {
+        margin-bottom: 25px;
+        width: 1020px;
+        max-width: 100%;
+
 
     }
 }

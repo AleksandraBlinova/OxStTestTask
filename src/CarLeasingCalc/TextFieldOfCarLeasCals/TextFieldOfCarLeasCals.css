@@ -58,6 +58,7 @@
         margin-top: 0;
         margin-bottom: 0;
         margin-left: 36px;
+        margin-right: 36px;
 
     }
 
@@ -82,6 +83,7 @@
         margin-top: 0;
         margin-bottom: 0;
         margin-left: 36px;
+        margin-right: 36px;
 
     }
 }
@@ -95,8 +97,9 @@
 @media only screen and (max-width: 320px) {
     .text-fields {
         display: grid;
-        grid-template-columns: repeat(1, 280px);
+        grid-template-columns: repeat(1, 210px);
         margin-left: 13px;
+        margin-right: 13px;
         margin-top: 37px;
 
     }

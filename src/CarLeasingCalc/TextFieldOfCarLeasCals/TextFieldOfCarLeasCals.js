@@ -25,13 +25,13 @@ const TextFieldOfCarLeasCals = (props) => {
             borderRadius: "16px",
             width: "427px",
             height: "68px",
-            "@media only screen and (max-width: 1024px)": {
+            "@media (max-width: 1024px) ": {
               width: "928px",
             },
-            "@media only screen and (max-width: 768px)": {
+            "@media (max-width: 768px)": {
               width: "696px",
             },
-            "@media only screen and (max-width: 320px)": {
+            "@media (max-width: 320px)": {
               width: "280px",
               height: "60px",
             },
