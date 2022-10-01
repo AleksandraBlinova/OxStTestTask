@@ -19,8 +19,8 @@ const TextFieldOfCarLeasCals = (props) => {
         sx={{
           backgroundColor: "#F3F3F4",
           borderRadius: "16px",
-          width: 427,
-          height: 68,
+          width: "427px",
+          height: "68px",
         }}
       >
         {" "}
@@ -39,8 +39,8 @@ const TextFieldOfCarLeasCals = (props) => {
         sx={{
           backgroundColor: "#F3F3F4",
           borderRadius: "16px",
-          width: 427,
-          height: 68,
+          width: "427px",
+          height: "68px",
         }}
       >
         {" "}
@@ -71,8 +71,8 @@ const TextFieldOfCarLeasCals = (props) => {
         sx={{
           backgroundColor: "#F3F3F4",
           borderRadius: "16px",
-          width: 427,
-          height: 68,
+          width: "427px",
+          height: "68px",
         }}
       >
         {" "}

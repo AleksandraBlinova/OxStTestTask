@@ -2,7 +2,7 @@ import React from "react";
 import { styled } from "@mui/material/styles";
 import InputBase from "@mui/material/InputBase";
 
-export const CustomInput = styled(InputBase)(({ theme }) => ({
+export const CustomInput = styled(InputBase)(() => ({
   "& .MuiInputBase-input": {
     borderRadius: "16px",
     border: "none",
