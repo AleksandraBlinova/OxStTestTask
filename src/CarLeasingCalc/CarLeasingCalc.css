@@ -64,6 +64,28 @@
         font-family: 'Nekst-Black';
 
     }
+
+    .calc-header {
+
+        width: 760px;
+        max-width: 100%;
+
+    }
+
+    .calc-body-counted-parametrs {
+        margin-bottom: 25px;
+        width: 760px;
+        max-width: 100%;
+
+    }
+
+    .calc-body-resulted-parametrs {
+        margin-bottom: 25px;
+        width: 760px;
+        max-width: 100%;
+
+
+    }
 }
 
 
@@ -80,6 +102,6 @@
     .calc-header {
 
         width: 289px;
-
+        max-width: 100%;
     }
 }
