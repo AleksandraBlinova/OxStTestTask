@@ -57,3 +57,28 @@
     }
 
 }
+
+@media only screen and (max-width: 320px) {
+    .result-parametrs-body {
+        margin-left: 21px;
+        display: grid;
+        grid-template-columns: repeat(1, 250px);
+    }
+
+    .result-parametrs-text-value {
+        color: #333333;
+        margin-bottom: 20px;
+    }
+
+    .result-parametrs-text-value {
+        font-family: "Nekst-Black";
+        font-size: 22px;
+        color: #333333;
+        margin-top: 0px;
+        margin-bottom: 20px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+
+    }
+
+}

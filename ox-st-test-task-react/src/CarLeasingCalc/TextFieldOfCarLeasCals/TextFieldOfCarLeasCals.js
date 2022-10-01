@@ -10,7 +10,7 @@ import { Box } from "@mui/system";
 const TextFieldOfCarLeasCals = (props) => {
   return (
     <div className="text-fields">
-      <div>
+      <div className="text-fields-div-container-for-3-elements">
         <div className="text-field-for-large-screens">
           <p className="text-field-p-text">Стоимость автомобиля</p>
         </div>
@@ -58,7 +58,7 @@ const TextFieldOfCarLeasCals = (props) => {
         />
       </div>
 
-      <div>
+      <div className="text-fields-div-container-for-3-elements">
         <div className="text-field">
           <p className="text-field-p-text">Первоначальный взнос</p>
         </div>
@@ -116,7 +116,7 @@ const TextFieldOfCarLeasCals = (props) => {
         />
       </div>
 
-      <div>
+      <div className="text-fields-div-container-for-3-elements">
         <div className="text-field">
           <p className="text-field-p-text">Срок лизинга</p>
         </div>

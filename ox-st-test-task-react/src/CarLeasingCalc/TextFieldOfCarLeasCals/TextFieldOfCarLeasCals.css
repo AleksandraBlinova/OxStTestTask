@@ -113,4 +113,9 @@
     .text-field-for-large-screens {
         display: none;
     }
+
+    .text-fields-div-container-for-3-elements {
+        height: 125px;
+
+    }
 }

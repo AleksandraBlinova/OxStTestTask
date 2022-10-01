@@ -24,9 +24,13 @@ const ButtonForApply = styled(Button)(({ theme }) => ({
     opacity: 0.4,
     color: "#FFF",
   },
-  "@media only screen and (max-width: 10248px)": {
+  "@media only screen and (max-width: 1024px)": {
     width: 345,
     height: 68,
+  },
+  "@media only screen and (max-width: 320px)": {
+    width: 265,
+    height: 60,
   },
 }));
 
