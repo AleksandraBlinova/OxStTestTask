@@ -46,4 +46,4 @@
 Данный калькулятор адаптивен для гаджетов 1024*1013, 768*1013, 320*803.
 </h3>
 
-<img src="https://github.com/AleksandraBlinova/OxStTestTask/blob/main/1calcleas.PNG" height="32"/>
+<img src="https://github.com/AleksandraBlinova/OxStTestTask/blob/main/1calcleas.PNG" width = "500" height="500"/>
