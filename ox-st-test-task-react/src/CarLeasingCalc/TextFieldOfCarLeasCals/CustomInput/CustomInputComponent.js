@@ -4,10 +4,11 @@ import InputBase from "@mui/material/InputBase";
 
 export const CustomInput = styled(InputBase)(({ theme }) => ({
   "& .MuiInputBase-input": {
-    borderRadius: 16,
+    borderRadius: "16px",
     border: "none",
-    fontSize: 30,
-    marginBottom: 0,
+    fontSize: "30px",
+    height: "59px",
+    marginBottom: "0px",
     fontFamily: "Nekst-Black",
     color: "#575757",
     paddingLeft: "24px",

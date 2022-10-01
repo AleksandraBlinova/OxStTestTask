@@ -5,6 +5,7 @@ import { CustomSliderComponent } from "./CustomSlider/CustomSliderComponent";
 
 import InputAdornment from "@mui/material/InputAdornment";
 import FormControl from "@mui/material/FormControl";
+import { Box } from "@mui/system";
 
 const TextFieldOfCarLeasCals = (props) => {
   return (
@@ -17,9 +18,9 @@ const TextFieldOfCarLeasCals = (props) => {
       <FormControl
         sx={{
           backgroundColor: "#F3F3F4",
-          borderRadius: 16,
-          width: 403,
-          height: 59,
+          borderRadius: "16px",
+          width: 427,
+          height: 68,
         }}
       >
         {" "}
@@ -37,9 +38,9 @@ const TextFieldOfCarLeasCals = (props) => {
       <FormControl
         sx={{
           backgroundColor: "#F3F3F4",
-          borderRadius: 16,
-          width: 403,
-          height: 59,
+          borderRadius: "16px",
+          width: 427,
+          height: 68,
         }}
       >
         {" "}
@@ -47,8 +48,19 @@ const TextFieldOfCarLeasCals = (props) => {
           value={props.valueInitalPaymMoney}
           disabled
           endAdornment={
-            <InputAdornment position="end">
-              <p className="input-units-of-measure">
+            <InputAdornment
+              position="end"
+              sx={{
+                backgroundColor: "#EBEBEC",
+                height: 54,
+                maxHeight: 54,
+                borderRadius: "16px",
+                width: 69,
+                maxWidth: 69,
+                marginRight: "10px",
+              }}
+            >
+              <p className="input-units-of-measure-per">
                 {props.valueInitalPaymPer}%
               </p>
             </InputAdornment>
@@ -58,9 +70,9 @@ const TextFieldOfCarLeasCals = (props) => {
       <FormControl
         sx={{
           backgroundColor: "#F3F3F4",
-          borderRadius: 16,
-          width: 403,
-          height: 59,
+          borderRadius: "16px",
+          width: 427,
+          height: 68,
         }}
       >
         {" "}
