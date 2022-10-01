@@ -26,8 +26,7 @@
 }
 
 .result-texts-container {
-    display: grid;
-    grid-template-columns: repeat(3, 459px);
+
     margin-top: -55px;
 }
 
@@ -36,6 +35,11 @@
         margin-left: 47px;
         display: grid;
         grid-template-columns: repeat(2, 459px);
+    }
+
+    .result-parametrs-text-value {
+        color: #333333;
+        margin-bottom: 15px;
     }
 
 }

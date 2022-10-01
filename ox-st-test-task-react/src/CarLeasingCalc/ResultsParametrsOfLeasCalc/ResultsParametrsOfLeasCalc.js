@@ -5,14 +5,20 @@ import ButtonApply from "./ButtonApply/ButtonApply";
 const ResultsParametrsOfLeasCalc = (props) => {
   return (
     <div className="result-parametrs-body">
-      {" "}
-      {props.calcResultsParametrs.map((calcResultsParametr) => (
-        <div className="result-parametrs-text" key={calcResultsParametr.id}>
-          <p className="result-parametrs-text-name">
-            {calcResultsParametr.name}
-          </p>
-        </div>
-      ))}
+      <div>
+        <p className="result-parametrs-text-name">Сумма договора лизинга</p>
+
+        <p className="result-parametrs-text-value">
+          {props.resultLeas + " " + "₽"}
+        </p>
+      </div>
+      <div>
+        <p className="result-parametrs-text-name">Ежемесячный платеж от</p>{" "}
+        <p className="result-parametrs-text-value">
+          {props.resultLeas + " " + "₽"}
+        </p>
+      </div>
+
       <ButtonApply
         loading={props.loading}
         valueCost={props.valueCost}
@@ -22,15 +28,6 @@ const ResultsParametrsOfLeasCalc = (props) => {
         resultTermpaym={props.resultTermpaym}
         resultLeas={props.resultLeas}
       />
-      <div className="result-texts-container">
-        {" "}
-        <p className="result-parametrs-text-value">
-          {props.resultLeas + " " + "₽"}
-        </p>
-        <p className="result-parametrs-text-value">
-          {props.resultTermpaym + " " + "₽"}
-        </p>
-      </div>
     </div>
   );
 };

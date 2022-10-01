@@ -24,6 +24,10 @@ const ButtonForApply = styled(Button)(({ theme }) => ({
     opacity: 0.4,
     color: "#FFF",
   },
+  "@media only screen and (max-width: 10248px)": {
+    width: 345,
+    height: 68,
+  },
 }));
 
 const ProgressForApply = styled(CircularProgress)(({ theme }) => ({

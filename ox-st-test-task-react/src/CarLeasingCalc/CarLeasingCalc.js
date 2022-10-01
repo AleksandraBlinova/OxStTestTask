@@ -10,11 +10,6 @@ const CarLeasingCalc = () => {
     setLoading(!loading);
   }
 
-  const [calcResultsParametrs, setCalcResultsParametrs] = useState([
-    { id: 1, name: "Сумма договора лизинга" },
-    { id: 2, name: "Ежемесячный платеж от" },
-  ]);
-
   const [resultLeas, setResultLeas] = useState(4467313);
   const handleChangeResultLeas = (event, newValue) => {
     setResultLeas(valueInitalPaymMoney + valueLeasTerm * resultTermpaym);
@@ -197,7 +192,6 @@ const CarLeasingCalc = () => {
       </div>
       <div className="calc-body-resulted-parametrs">
         <ResultsParametrsOfLeasCalc
-          calcResultsParametrs={calcResultsParametrs}
           resultTermpaym={resultTermpaym}
           resultLeas={resultLeas}
           handleChangeResultTermpaym={handleChangeResultTermpaym}
