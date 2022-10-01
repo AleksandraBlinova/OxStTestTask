@@ -1,6 +1,6 @@
 .text-fields {
     display: grid;
-    grid-template-columns: repeat(3, 459px);
+    grid-template-columns: repeat(3, 427px);
     margin-top: 0;
     margin-bottom: 0;
     margin-left: 47px;
@@ -54,7 +54,7 @@
 @media only screen and (max-width: 1024px) {
     .text-fields {
         display: grid;
-        grid-template-columns: repeat(1, 459px);
+        grid-template-columns: repeat(1, 427px);
         margin-top: 0;
         margin-bottom: 0;
         margin-left: 36px;
