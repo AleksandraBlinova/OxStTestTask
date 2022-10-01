@@ -44,13 +44,6 @@ const ButtonApply = ({
     setIfPressed(true);
   };
 
-  const options = {
-    headers: {
-      "Content-Type": "application/json",
-    },
-    withCredentials: true,
-  };
-
   const handleSubmit = () => {
     const values = {
       valueCost: valueCost,
