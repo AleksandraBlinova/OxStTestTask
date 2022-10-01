@@ -2,7 +2,7 @@
   "name": "ox-st-test-task-react",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://aleksandrablinova.github.io/OxStTestTask/ox-st-test-task-react/",
+  "homepage": "https://aleksandrablinova.github.io/OxStTestTask/",
   "dependencies": {
     "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.10.4",
