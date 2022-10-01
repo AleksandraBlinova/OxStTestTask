@@ -23,7 +23,6 @@ const TextFieldOfCarLeasCals = (props) => {
         min={1000000}
         max={6000000}
         step={100000}
-        onClick={props.handleChangeLoading}
       />
       <CustomSliderComponent
         value={props.valueInitalPaymPer}
@@ -31,6 +30,7 @@ const TextFieldOfCarLeasCals = (props) => {
         min={10}
         max={60}
         step={0.1}
+        onClick={props.handleChangeLoading}
       />
       <CustomSliderComponent
         value={props.valueLeasTerm}

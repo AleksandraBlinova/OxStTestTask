@@ -75,15 +75,70 @@ const CarLeasingCalc = () => {
       setValueInitalPaymMoney(
         Math.round(parseInt(event.target.value) * (valueInitalPaymPer / 100))
       );
+
+      setResultTermpaym(
+        Math.round(
+          (parseInt(event.target.value) -
+            parseInt(event.target.value) * (valueInitalPaymPer / 100)) *
+            ((0.035 * Math.pow(1 + 0.035, valueLeasTerm)) /
+              (Math.pow(1 + 0.035, valueLeasTerm) - 1))
+        )
+      );
+
+      setResultLeas(
+        Math.round(
+          parseInt(event.target.value) * (valueInitalPaymPer / 100) +
+            valueLeasTerm *
+              ((parseInt(event.target.value) -
+                parseInt(event.target.value) * (valueInitalPaymPer / 100)) *
+                ((0.035 * Math.pow(1 + 0.035, valueLeasTerm)) /
+                  (Math.pow(1 + 0.035, valueLeasTerm) - 1)))
+        )
+      );
     }
 
     if (event.target.value < 1000000) {
       setValueCost(1000000);
       setValueInitalPaymMoney(Math.round(1000000 * (valueInitalPaymPer / 100)));
+      setResultTermpaym(
+        Math.round(
+          (1000000 - 1000000 * (valueInitalPaymPer / 100)) *
+            ((0.035 * Math.pow(1 + 0.035, valueLeasTerm)) /
+              (Math.pow(1 + 0.035, valueLeasTerm) - 1))
+        )
+      );
+
+      setResultLeas(
+        Math.round(
+          1000000 * (valueInitalPaymPer / 100) +
+            valueLeasTerm *
+              ((1000000 - 1000000 * (valueInitalPaymPer / 100)) *
+                ((0.035 * Math.pow(1 + 0.035, valueLeasTerm)) /
+                  (Math.pow(1 + 0.035, valueLeasTerm) - 1)))
+        )
+      );
     }
     if (event.target.value > 6000000) {
       setValueCost(6000000);
       setValueInitalPaymMoney(Math.round(6000000 * (valueInitalPaymPer / 100)));
+
+      setResultTermpaym(
+        Math.round(
+          (6000000 - 6000000 * (valueInitalPaymPer / 100)) *
+            ((0.035 * Math.pow(1 + 0.035, valueLeasTerm)) /
+              (Math.pow(1 + 0.035, valueLeasTerm) - 1))
+        )
+      );
+
+      setResultLeas(
+        Math.round(
+          6000000 * (valueInitalPaymPer / 100) +
+            valueLeasTerm *
+              ((6000000 - 6000000 * (valueInitalPaymPer / 100)) *
+                ((0.035 * Math.pow(1 + 0.035, valueLeasTerm)) /
+                  (Math.pow(1 + 0.035, valueLeasTerm) - 1)))
+        )
+      );
     }
   };
 
