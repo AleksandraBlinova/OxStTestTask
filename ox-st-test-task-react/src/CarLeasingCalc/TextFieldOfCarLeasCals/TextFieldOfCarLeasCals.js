@@ -11,8 +11,12 @@ const TextFieldOfCarLeasCals = (props) => {
   return (
     <div className="text-fields">
       <div>
-        <div className="text-field">
+        <div className="text-field-for-large-screens">
           <p className="text-field-p-text">Стоимость автомобиля</p>
+        </div>
+
+        <div className="text-field-for-small-screens">
+          <p className="text-field-p-text">Желаемая сумма кредита</p>
         </div>
 
         <FormControl

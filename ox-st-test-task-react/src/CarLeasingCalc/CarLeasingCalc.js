@@ -10,17 +10,6 @@ const CarLeasingCalc = () => {
     setLoading(!loading);
   }
 
-  const [calcParametrs, setCalcParametrs] = useState([
-    {
-      id: 1,
-      name: "Стоимость автомобиля",
-
-      extraInfo: "₽",
-    },
-    { id: 2, name: "Первоначальный взнос" },
-    { id: 3, name: "Срок лизинга", extraInfo: "мес." },
-  ]);
-
   const [calcResultsParametrs, setCalcResultsParametrs] = useState([
     { id: 1, name: "Сумма договора лизинга" },
     { id: 2, name: "Ежемесячный платеж от" },
@@ -195,7 +184,6 @@ const CarLeasingCalc = () => {
       </div>
       <div className="calc-body-counted-parametrs">
         <TextFieldOfCarLeasCals
-          calcParametrs={calcParametrs}
           valueInitalPaymMoney={valueInitalPaymMoney}
           valueCost={valueCost}
           handleChangeCost={handleChangeCost}
