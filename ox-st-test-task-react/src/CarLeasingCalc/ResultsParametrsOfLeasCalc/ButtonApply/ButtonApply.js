@@ -3,6 +3,7 @@ import "./ButtonApply.css";
 import { styled } from "@mui/material/styles";
 import Button from "@mui/material/Button";
 import CircularProgress from "@mui/material/CircularProgress";
+import axios from "axios";
 
 const ButtonForApply = styled(Button)(({ theme }) => ({
   color: "#FFF",
@@ -29,10 +30,52 @@ const ProgressForApply = styled(CircularProgress)(({ theme }) => ({
   color: "#FFF",
 }));
 
-const ButtonApply = ({ loading }) => {
+const ButtonApply = ({
+  loading,
+  valueCost,
+  valueInitalPaymPer,
+  valueInitalPaymMoney,
+  valueLeasTerm,
+  resultTermpaym,
+  resultLeas,
+}) => {
   const [ifPressed, setIfPressed] = useState(false);
   const handleChangeIfPressed = () => {
     setIfPressed(true);
+  };
+
+  const options = {
+    headers: {
+      "Content-Type": "application/json",
+    },
+    withCredentials: true,
+  };
+
+  const handleSubmit = () => {
+    const values = {
+      valueCost: valueCost,
+      valueInitalPaymPer: valueInitalPaymPer,
+      valueInitalPaymMoney: valueInitalPaymMoney,
+      valueLeasTerm: valueLeasTerm,
+      resultTermpaym: resultTermpaym,
+      resultLeas: resultLeas,
+    };
+
+    axios
+      .post(
+        "https://eoj3r7f3r4ef6v4.m.pipedream.net",
+        {
+          withCredentials: true,
+          headers: {
+            "Content-Type": "application/json",
+          },
+        },
+        values
+      )
+      .then((response) => {
+        console.log(response);
+      })
+      .catch(console.error);
   };
 
   return (
@@ -40,7 +83,10 @@ const ButtonApply = ({ loading }) => {
       <ButtonForApply
         variant="contained"
         disabled={ifPressed}
-        onClick={handleChangeIfPressed}
+        onClick={() => {
+          handleChangeIfPressed();
+          handleSubmit();
+        }}
       >
         {loading ? (
           <ProgressForApply />

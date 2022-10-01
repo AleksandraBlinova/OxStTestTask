@@ -215,6 +215,10 @@ const CarLeasingCalc = () => {
           handleChangeResultTermpaym={handleChangeResultTermpaym}
           handleChangeResultLeas={handleChangeResultLeas}
           loading={loading}
+          valueCost={valueCost}
+          valueInitalPaymPer={valueInitalPaymPer}
+          valueInitalPaymMoney={valueInitalPaymMoney}
+          valueLeasTerm={valueLeasTerm}
         />
       </div>
     </>

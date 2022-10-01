@@ -13,7 +13,15 @@ const ResultsParametrsOfLeasCalc = (props) => {
           </p>
         </div>
       ))}
-      <ButtonApply loading={props.loading} />
+      <ButtonApply
+        loading={props.loading}
+        valueCost={props.valueCost}
+        valueInitalPaymPer={props.valueInitalPaymPer}
+        valueInitalPaymMoney={props.valueInitalPaymMoney}
+        valueLeasTerm={props.valueLeasTerm}
+        resultTermpaym={props.resultTermpaym}
+        resultLeas={props.resultLeas}
+      />
       <div className="result-texts-container">
         {" "}
         <p className="result-parametrs-text-value">
