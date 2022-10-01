@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/OxStTestTask/static/css/main.1393de53.css",
+    "main.js": "/OxStTestTask/static/js/main.e2bdbd59.js",
+    "static/js/787.bb4333fc.chunk.js": "/OxStTestTask/static/js/787.bb4333fc.chunk.js",
+    "static/media/Nekst-Black.ttf": "/OxStTestTask/static/media/Nekst-Black.dffaebf93d38d4c41536.ttf",
+    "static/media/Gilroy-Regular.ttf": "/OxStTestTask/static/media/Gilroy-Regular.fa652e766b6a85a1f9cb.ttf",
+    "static/media/logo.svg": "/OxStTestTask/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/OxStTestTask/index.html",
+    "main.1393de53.css.map": "/OxStTestTask/static/css/main.1393de53.css.map",
+    "main.e2bdbd59.js.map": "/OxStTestTask/static/js/main.e2bdbd59.js.map",
+    "787.bb4333fc.chunk.js.map": "/OxStTestTask/static/js/787.bb4333fc.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1393de53.css",
+    "static/js/main.e2bdbd59.js"
+  ]
+}
