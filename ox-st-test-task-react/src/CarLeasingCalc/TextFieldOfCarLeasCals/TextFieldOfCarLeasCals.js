@@ -39,7 +39,7 @@ const TextFieldOfCarLeasCals = (props) => {
         >
           {" "}
           <CustomInput
-            value={props.valueCost}
+            value={props.valueCost.toLocaleString()}
             onChange={props.handleChangeCostKeyboard}
             endAdornment={
               <InputAdornment position="end">
@@ -83,7 +83,7 @@ const TextFieldOfCarLeasCals = (props) => {
         >
           {" "}
           <CustomInput
-            value={props.valueInitalPaymMoney}
+            value={props.valueInitalPaymMoney.toLocaleString()}
             disabled
             endAdornment={
               <InputAdornment

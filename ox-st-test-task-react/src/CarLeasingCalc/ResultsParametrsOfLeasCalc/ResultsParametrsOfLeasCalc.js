@@ -9,13 +9,13 @@ const ResultsParametrsOfLeasCalc = (props) => {
         <p className="result-parametrs-text-name">Сумма договора лизинга</p>
 
         <p className="result-parametrs-text-value">
-          {props.resultLeas + " " + "₽"}
+          {props.resultLeas.toLocaleString() + " " + "₽"}
         </p>
       </div>
       <div>
         <p className="result-parametrs-text-name">Ежемесячный платеж от</p>{" "}
         <p className="result-parametrs-text-value">
-          {props.resultTermpaym + " " + "₽"}
+          {props.resultTermpaym.toLocaleString() + " " + "₽"}
         </p>
       </div>
 
