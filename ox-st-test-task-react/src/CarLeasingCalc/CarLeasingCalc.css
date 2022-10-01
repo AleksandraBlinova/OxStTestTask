@@ -17,3 +17,40 @@
 .calc-body-counted-parametrs {
     margin-bottom: 62px;
 }
+
+@media only screen and (max-width: 1024px) {
+    .calc-header-h1 {
+        font-size: 54px;
+        margin-top: 100px;
+        line-height: 90%;
+        margin-left: 47px;
+        margin-right: 47px;
+        font-family: 'Nekst-Black';
+
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .calc-header-h1 {
+        font-size: 54px;
+        margin-top: 64px;
+        line-height: 90%;
+        margin-left: 47px;
+        margin-right: 47px;
+        font-family: 'Nekst-Black';
+
+    }
+}
+
+
+@media only screen and (max-width: 320px) {
+    .calc-header-h1 {
+        font-size: 54px;
+        margin-top: 44px;
+        line-height: 90%;
+        margin-left: 47px;
+        margin-right: 47px;
+        font-family: 'Nekst-Black';
+
+    }
+}
