@@ -1,70 +1,32 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h1 align="center" target="_blank"> Веб-ресурс "Калькулятор лизинга авто"</h1> 
 
-## Available Scripts
+<p>
+1. В каждое поле можно ввести значение как с клавиатуры, так и с помощью ползунка;
+2. При выборе значения с помощью ползунка, все числа пересчитыватываются динамически в процессе движения ползунка;
+3. У каждого поля есть максимальное и минимальное значение;
+4. При вводе некорректного значения с клавиатуры, оно сбрасывается к ближайшему корректному числу (максимуму или минимуму).
+5. Для поля “Стоимость автомобиля” границы: 1 млн.руб. — 6 млн.руб.;
+6. Для поля “Первоначальный взнос” границы: 10% - 60% (здесь ввод происходит именно в процентах от стоимости, а не рублях; рубли - результат расчета от введенной стоимости автомобиля);
+7. Для поля “Срок лизинга” границы: 1 - 60 месяцев;
+</p>
 
-In the project directory, you can run:
+<p>
+По кнопке “Оформить заявку” формируется запрос, который будет отправлять все данные калькулятора на бэкенд.
+</p>
 
-### `npm start`
+<p>
+Кнопка "Отправить заявку" превращается в loading button при нажатии на ползунок у "Первоначального взноса". Чтобы отключить loading, необходимо повторно нажать на данный ползунок.
+</p>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<p>
+Кнопка "Отправить заявку" становится серой (режим "pressed") при нажатии на ползунок у "Первоначального взноса".
+</p>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<p>
+Кнопка "Отправить заявку" становится disabled  при нажатии на нее.
+</p>
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<h4>
+Данный калькулятор responsive для гаджетов 1024*1013, 768*1013, 320*803.
+</h4>
